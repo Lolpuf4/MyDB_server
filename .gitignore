@@ -1,0 +1,5 @@
+MyDB
+protocol
+.idea/
+__pycache__
+*json
