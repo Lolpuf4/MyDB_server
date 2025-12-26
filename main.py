@@ -30,8 +30,8 @@ def handle_client_commands(client, address):
         send_text(client, result)
 
 
-#HOST = "0.0.0.0"
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
+#HOST = "127.0.0.1"
 PORT = 10002
 
 socket_test = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
