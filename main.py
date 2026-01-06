@@ -4,6 +4,7 @@ import threading
 import datetime
 from protocol.protocol import *
 from MyDB.errors import*
+import sys
 
 def handle_client_commands(client, address):
     print(f"working on: {address}")
@@ -30,8 +31,9 @@ def handle_client_commands(client, address):
         send_text(client, result)
 
 
-HOST = "0.0.0.0"
-#HOST = "127.0.0.1"
+
+HOST = "0.0.0.0" if len(sys.argv) > 1 else "127.0.0.1"
+
 PORT = 10011
 
 socket_test = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
